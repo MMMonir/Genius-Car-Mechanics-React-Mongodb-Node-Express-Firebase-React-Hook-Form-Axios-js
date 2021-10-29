@@ -51,9 +51,9 @@ async function run() {
       app.get('/services/:id', async(req, res) => {
         const id = req.params.id;
         const query = { _id: ObjectId(id) };
-        const user = await servicesCollection.findOne(query);
+        const service = await servicesCollection.findOne(query);
+        res.send(service);
         console.log('Load user with id: ', id);
-        res.send(user);
       });
       //Details API: Get Details from user id from Backend End
 

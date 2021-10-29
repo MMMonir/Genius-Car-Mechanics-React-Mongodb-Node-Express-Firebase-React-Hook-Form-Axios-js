@@ -77,13 +77,13 @@ async function run() {
 
       //DELETE API: From React website Start
       // Import in the top : const ObjectId = require('mongodb').ObjectId;
-    //   app.delete('/users/:id', async(req, res) => {
-    //     const id = req.params.id;
-    //     const query = { _id: ObjectId(id) };
-    //     const result = await usersCollection.deleteOne(query);
-    //     console.log('Deleting user with id', result);
-    //     res.json(result);
-    //   });
+      app.delete('/services/:id', async(req, res) => {
+        const id = req.params.id;
+        const query = { _id: ObjectId(id) };
+        const result = await servicesCollection.deleteOne(query);
+        console.log('Deleting user with id', result);
+        res.json(result);
+      });
       // DELETE API: From React website End
 
     }
